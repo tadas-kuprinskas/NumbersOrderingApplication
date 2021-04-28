@@ -11,13 +11,10 @@ namespace DanskeHomeworkAssignment.WebApi.Services
     {
         private const string fileUrl = "..\\..\\..\\..\\CommonData\\SortedNumbers.txt";
 
-        //private readonly string projectDirectory = AppDomain.CurrentDomain.BaseDirectory;
-
         public string FilePath { get; set; } = $"{Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileUrl)}";
 
         public async Task WriteToFile(int[] sortedNumbers)
-        {
-            
+        {           
             using StreamWriter streamWriter = new(FilePath);
 
             await streamWriter.WriteLineAsync(string.Join(' ', sortedNumbers));

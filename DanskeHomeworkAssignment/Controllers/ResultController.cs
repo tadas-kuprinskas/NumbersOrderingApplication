@@ -13,7 +13,6 @@ namespace DanskeHomeworkAssignment.Controllers
     [Route("[controller]")]
     public class ResultController : ControllerBase
     {
-
         private readonly IFileService _fileService;
 
         public ResultController(IFileService fileService)
